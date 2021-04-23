@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+    name: "ssadcloudk8s-9b7c"
+    labels:
+        app: "ssadcloudk8s-9b7c"
+spec:
+    type: ClusterIP
+    ports:
+    - port: 80
+      targetPort: 80
+      protocol: TCP
+      name: http
+    selector:
+        app: "ssadcloudk8s-9b7c"
