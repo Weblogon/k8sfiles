@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+    name: "ssadcloudk8s-9b7c"
+    labels:
+        app: "ssadcloudk8s-9b7c"
+    annotations:
+        kubernetes.io/ingress.class: addon-http-application-routing
+spec:
+    rules:
+        - host: ssadcloudk8sb986-ssadcloudk8s-9b7c.9405a4d8b516453c8cd2.eastus2.aksapp.io
+          http:
+            paths:
+            - path: /
+              backend:
+                serviceName: "ssadcloudk8s-9b7c"
+                servicePort: 80
