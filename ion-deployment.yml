@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: ion
-        image: ssadcloud/alpha:latest
+        image: ssadcloud/dkr-docker-repo:v1.0
         ports:
         - containerPort: 80
