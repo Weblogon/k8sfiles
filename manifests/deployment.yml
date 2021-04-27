@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "ssadcloudk8s-1738"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "ssadcloudk8s-1738"
+  template:
+    metadata:
+      labels:
+        app: "ssadcloudk8s-1738"
+    spec:
+      containers:
+        - name: "ssadcloudk8s-1738"
+          image: "ssadcloudacr.azurecr.io/ssadcloudk8s"
+          ports:
+          - containerPort: 80
